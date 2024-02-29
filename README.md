@@ -37,3 +37,7 @@ $\implies \log{ _b}{n} \leq \log{ _b}{n} (\forall n \geq 1)$<br>
 $\implies T$, for both logarithms are always equal for any input $n \geq 1$.
 
 Both $\log{ _2}{n}$ and $\log{ _5}{n}$ are asymptotically the same as any logarithm function with a different base; therefore, $\log{ _2}{n}$ and $\log{ _5}{n}$ are asymptotically the same.
+
+### Sources
+
+I worked with the TA, Ali Torabi, to review notes before working on this. Additionally, I worked with Evan Kallas when finishing the markdown file.  
