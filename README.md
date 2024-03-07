@@ -15,17 +15,22 @@ $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0
 
 ### Proof
 
-For this proof, we will demonstrate that $\log{ _2}{n}$ is asymptotically the same as $\log{ _5}{n}$. This boils down to choosing the $c$ constant to change the base of each logarithmic function.
+For this proof, we will demonstrate that $\log{ _2}{n}$ is asymptotically the same as $\log{ _5}{n}$. This boils down to manipulating the $c$ constant with the change the base of each logarithmic function.
 
 $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0$<br>
 Given $f(n) = \log{ _2}{n}$:<br>
 $\implies \exists c, n_0: T(n) \leq c \cdot \log{ _2}{n} (\forall n \geq n_0)$<br>
-$\implies T(n) \leq \frac{\log{2}}{\log{5}} \cdot \log{ _2}{n} (\forall n \geq 1)$ {$n_0 = 1; c = \frac{\log{2}}{\log{5}}$}<br>
-$\implies T(n) \leq \frac{\log{2}}{\log{5}} \cdot \frac{\log{n}}{\log{2}} (\forall n \geq 1)$<br>
-$\implies T(n) \leq \log{ _5}{n} (\forall n \geq 1)$<br>
+$\implies \exists c, n_0: T(n) \leq c \cdot \frac{\log{n}}{\log{2}} (\forall n \geq n_0)$<br>
+$\implies \exists c, n_0: T(n) \leq \frac{1}{\log{2}}c \cdot \log{n} (\forall n \geq n_0)$<br>
 
-Using change of base, we can derive $\log{ _5}{n}$ from $\log{ _2}{n}$ (and vice versa) using a constant $c$. Therefore, $\log{ _2}{n}$ and $\log{ _5}{n}$ are asymptotically the same. Q.E.D.
+
+Given $f(n) = \log{ _5}{n}$:<br>
+$\implies \exists c, n_0: T(n) \leq c \cdot \log{ _5}{n} (\forall n \geq n_0)$<br>
+$\implies \exists c, n_0: T(n) \leq c \cdot \frac{\log{n}}{\log{5}} (\forall n \geq n_0)$<br>
+$\implies \exists c, n_0: T(n) \leq \frac{1}{\log{5}}c \cdot \log{n} (\forall n \geq n_0)$<br>
+
+Using change of base, we can derive $\log{n}$ from both $\log{ _2}{n}$ and $\log{ _5}{n}$ since the change of base between log functions is a constant multiple which can be manipulated by $c$ in $O(n)$. Therefore, $\log{ _2}{n}$ and $\log{ _5}{n}$ are asymptotically the same. Q.E.D.
 
 ### Sources
 
-I worked with the TA, Ali Torabi, to review notes before working on this. Additionally, I worked with Evan Kallas when finishing the markdown file.  
+I worked with the TA, Ali Torabi, to review notes before working on this. Additionally, I worked with Evan Kallas and Ishita Patel when finishing and adjusting the markdown file.  
